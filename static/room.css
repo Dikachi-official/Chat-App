@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    height:100vh;
+    width:100%;
+}
+
+.body h2{
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    height:60px;
+}
+
+.header li{
+    list-style: none;
+    margin-right: 10px;
+    position: absolute;
+}
+
+.header li label span{
+    display:flex;
+    user-select: none;
+    cursor:pointer;
+    color:#777;
+}
+
+.header li label span ion-icon{
+    margin-right:10px;
+}
+
+.header li label .action{
+    position:relative;
+}
+
+.header li label .action input{
+    appearance:none;
+}
+
+.header li label .action i{
+ 
+    width:30px;
+    border-radius:15px;
+}
+
+.header li label .action i::before{
+    content:'';
+    position:absolute;
+    top:2.5px;
+    left:2.5px;
+    width:10px;
+    height:10px;
+    border-radius:10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header li label .action input:checked ~ i{
+    background:#222;
+}
+
+.darkMode{
+    background:#222;
+}
+
+.form{
+    display:flex;
+    font-weight: 200;
+    color: #fff;
+    text-align: center;
+    justify-content: space-between;
+    position:initial;
+    border-radius: 10px;
+    border-style: solid;
+    border-color:blue;
+    border-left: 30%;
+    border-radius: 20rem;
+}
+
+.form input{
+    border: 5px blue solid;
+}
+#display{
+    color:#fff;
+    text-align: center;
+    justify-content: center; 
+}
+script{
+    color: #fff;
+}
+
+
+
+/*--==Next CSS FILE==--*/
+.container{
+    width:100%;
+    height: 20vh;
+    background-image:linear-gradient(to right, #1c00f2, #453f96);
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    display:block;
+}
+.submit{
+    display:flex;
+}
+
+.chatbox{
+    background:#1d61c2;
+    width:80%;
+    min-width:200px;
+    justify-items: center;
+    align-items: center;
+}
+
+.input_field{
+    width:200px;
+}
+
+.col-1{
+    flex:1;
+}
+
+.col-2{
+    flex-basis:250px;
+    background:#3874c9;
+}
+
+.msg-row{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.msg-text{
+    background:rgba(255, 255, 255, 0.1);
+    padding:5px 40px;
+    border-radius:8px;
+    flex-basis:70%;
+    font-weight:300;
+}
+
+.msg-text-name{
+    font-weight: 200;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.input_field{
+    width:160px;
+}
+
+.col-1 input{
+    border:0;
+    outline:none;
+    padding:20px 40px;
+    background:#3874c9;
+    color:#fff;
+    width:100%;
+    font-size:16px;
+    font-weight:100;
+}
+::placeholder{
+    color:#fff;
+}

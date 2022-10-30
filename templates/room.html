@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="dsecription" content="" />
+    <link rel="stylesheet" href="{% static 'room.css'%}" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+        <h2> {{ room }} ChatRoom</h2>
+        <li>
+          <label>
+            <span class="title"><ion-icon name="moon"></ion-icon>Dark mode</span>
+            <span class="action">
+              <input type="checkbox" id="dark">
+              <i></i>
+            </span>
+          </label>
+        </li>
+    </div>    
+
+    <div id="display">
+    <!--<div class="container red">
+        <b>Mike</b><p>Hey, Whats Good?</p>
+        <span class="time-left">September, 2022</span>
+        </div>-->
+    </div>
+
+
+    <script>
+      $(document).ready(function () {   //Once document is loaded, it should perform this function
+        setInterval(function () {       //Everything within this ajax code will be done every 1 sec = (1000ms below)
+          $.ajax({
+            type: "GET",             //get method to 
+            url: "/getMessages/{{room}}/",     //get the data from this URL that has room from view
+            success: function (response) {
+                console.log(response);
+              $("#display").empty();
+              for (var key in response.messages)
+               {      // for each value in our json(messages) data
+                var temp ="<div class='container red'><b>" +response.messages[key].user +"</b><p>" +response.messages[key].value +"</p><span class='time-left'>" +response.messages[key].date +
+                  "</span></div>";      // Shows the exact data with the one commmented above
+                $("#display").append(temp);  // Appending our new variable to the div tag with "id of display"(line 21)
+              }
+            },
+            error: function (response) {    //Error message in case any errors
+              alert("An error occured");
+            },
+          });
+        }, 1000);
+      });
+    </script>
+
+
+    <div class="container">
+        <div class="chatbox">
+
+            <form id="post-form" class="msg-text">
+                {% csrf_token %}
+                <input type="hidden" class="msg-text-name" name="username" id="username" value="{{ username }}"/>
+                <input type="hidden" name="room_id" id="room_id" value="{{ room_details.id }}"/>
+                <input type="text" class="input_field "name="message" id="message" />
+                <input type="submit" class="submit" value="Send" />
+            </form>
+        </div>    
+    </div> 
+    
+    
+
+    <script>  //Dark mode styling
+      let body =  document.querySelector('body');
+      let dark =  document.querySelector('#dark');
+
+      dark.onclick = function(){
+        if(dark.checked == true){
+          body.classList.add('darkMode');
+        }
+        else{
+          body.classList.remove('darkMode');
+        }
+      }
+    </script>  
+  </body>
+
+
+
+  <script type="text/javascript">       //Ajax Data to make our message send without reloading and clear input field
+    $(document).on("submit", "#post-form", function (e) {
+      e.preventDefault(); //when a user clicks on submit button on this post form, let a function occur in "e" value
+                            //Prevent default - prevents reloading/refreshing our page
+      $.ajax({
+        type: "POST",    //method
+        url: "/send",     //Using the "send" at urls.py
+        data: {
+          username: $("#username").val(),      //List of the data, we are passing to "send.url/send.views"
+          room_id: $("#room_id").val(),
+          message: $("#message").val(),
+          csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),      //csrf implementation
+        },
+        success: function (data) {
+            //alert(data)              //success message sent with the one commmented above ("data")
+        },
+      });
+      document.getElementById("message").value = "";        //Clears the input field after user sends a message to database
+    });
+</script>
+</html>

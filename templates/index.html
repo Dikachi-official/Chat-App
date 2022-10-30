@@ -1,0 +1,52 @@
+<html>
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="dsecription" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'index.css'%}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chatbox">
+        <div class="form">
+          <form id="post-form" method="POST" action="assessview">
+            {% csrf_token %}
+            <h2>Lets Chat</h2>
+            <br />
+            <br />
+            <label>Room Name</label>
+            <input type="text" name="room_name" id="room_name" />
+            <br />
+            <br />
+            <br />
+            <label>Username</label>
+            <input type="text" name="username" id="username" />
+            <br />
+            <br />
+            <br />
+            <input type="submit" value="Enter Room" />
+            <br />
+            <br />
+          </form>
+        </div>
+        <br>
+        <br>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="footer">
+        <div class="footer_container">
+            <p>Messenger <b>|</b><i> By Dikachi-official &#169</i></p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
