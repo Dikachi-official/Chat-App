@@ -69,11 +69,31 @@
                 {% csrf_token %}
                 <input type="hidden" class="msg-text-name" name="username" id="username" value="{{ username }}"/>
                 <input type="hidden" name="room_id" id="room_id" value="{{ room_details.id }}"/>
-                <input type="text" class="input_field "name="message" id="message" />
+                <input type="text" class="input_field" name="message" id="message" />
                 <input type="submit" class="submit" value="Send" />
             </form>
         </div>    
     </div> 
+
+    <style>
+      .submit {
+        border-radius:8px;
+        width:50px;
+        height:30px;
+        margin-top:8px;
+      }
+      .submit:hover {
+        background: #563434;
+      }
+      .input_field{
+        width:280px;
+        border-radius:10px;
+      }
+      
+      .chatbox{
+        border-right-radius:10px;
+      }
+    </style>  
     
     
 
