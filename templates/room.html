@@ -66,7 +66,7 @@
         <div class="chatbox">
 
             <form id="post-form" class="msg-text">
-                {% csrf_token %}
+              {% csrf_token %}
                 <input type="hidden" class="msg-text-name" name="username" id="username" value="{{ username }}"/>
                 <input type="hidden" name="room_id" id="room_id" value="{{ room_details.id }}"/>
                 <input type="text" class="input_field" name="message" id="message" />

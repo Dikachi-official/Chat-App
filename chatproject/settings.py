@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast = bool) # TO CONVERT TO BOOLEAN
 
-ALLOWED_HOSTS = ['web-production-f166.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-d044.up.railway.app']
 
 
 # Application definition
