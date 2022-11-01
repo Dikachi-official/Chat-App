@@ -18,8 +18,9 @@ def room(request, room):     #Collecting room variable passed in its dynamic url
 
 
 def assessview(request):    #To check existence of a room before function 
-    room = request.POST['room_name']   
-    username = request.POST['username']
+    if request.method == 'POST':
+        room = request.POST['room_name']   
+        username = request.POST['username']
 
     if Room.objects.filter(name=room).exists():     #If an existing "room" correlates with the "name" of room inputted by a certain user
         return redirect('/' +room+'/?username=' +username)  #take user to the room with the name
