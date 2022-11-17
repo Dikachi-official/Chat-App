@@ -22,5 +22,6 @@ Chat-App landing page
   <h2>Contributing</h2>
 <p>Contributions, and feature requests are welcomed</p>
 <h2 align="center">Show your support</h2>
+<p align="right">Leave a <strong><i>star</i></strong> for the project</p> 
 
 
