@@ -28,8 +28,9 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast = bool) # TO CONVERT TO BOOLEAN
 
-ALLOWED_HOSTS = ['web-production-d044.up.railway.app', '127.0.0.1']
-
+#ALLOWED_HOSTS = ['web-production-d044.up.railway.app', '127.0.0.1', 'localhost']
+#CSRF_TRUSTED_ORIGINS = ['https://web-production-d044.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -82,11 +83,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME':'railway',
-        'HOST': 'containers-us-west-57.railway.app',
-        'PASSWORD':'k8UHX0zVlY8piMKUju2i',
-        'PORT':'6225',
-        'USER':'postgres'
+        #'NAME':'railway',
+        #'HOST': 'containers-us-west-57.railway.app',
+        #'PASSWORD':'k8UHX0zVlY8piMKUju2i',
+        #'PORT':'6225',
+        #'USER':'postgres'
     }
 }
 
