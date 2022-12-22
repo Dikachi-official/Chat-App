@@ -31,6 +31,7 @@ DEBUG = config('DEBUG', cast = bool) # TO CONVERT TO BOOLEAN
 #ALLOWED_HOSTS = ['web-production-d044.up.railway.app', '127.0.0.1', 'localhost']
 #CSRF_TRUSTED_ORIGINS = ['https://web-production-d044.up.railway.app']
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['']
 
 # Application definition
 
