@@ -6,10 +6,10 @@ Chat-App landing page
 <h2>Built With</h2>
 <strong><i><p>Major Languages</p><i></strong>
 <hr>
-<li><label for="title">HTML</label></li><br>
-<li><label for="title">CSS</label></li><br>
-<li><label for="title">PYTHON</label></li><br>
-<li><label for="title">JAVASCRIPT</label></li><br>
+<li><label for="title">HTML</label></li>
+<li><label for="title">CSS</label></li>
+<li><label for="title">PYTHON</label></li>
+<li><label for="title">JAVASCRIPT</label></li>
 <h2>Framework</h2>
 <input type="checkbox"><label for="title">DJANGO</label><br>
 <h2>Prerequisites</h2>
