@@ -11,7 +11,7 @@ Chat-App landing page
 <li><label for="title">PYTHON</label></li>
 <li><label for="title">JAVASCRIPT</label></li>
 <h2>Framework</h2>
-<input type="checkbox"><label for="title">DJANGO</label><br>
+<li><label for="title">DJANGO</label></li><br>
 <h2>Prerequisites</h2>
 <ul>
 <li> A web Browser (like Google Chrome...)</li>
