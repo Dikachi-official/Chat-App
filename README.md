@@ -18,7 +18,7 @@ Chat-App landing page
 <li> A code editor (like VScode...)</li>
 </ul>
 <h2>Creator</h2>
-<p><i class="ri-account-circle-fill"></i>Dikachi-official</p>
+<li></i>Dikachi-official</li>
   <h2>Contributing</h2>
 <p>Contributions, and feature requests are welcomed</p>
 <h2 align="center">Show your support</h2>
