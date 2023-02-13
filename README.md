@@ -13,10 +13,10 @@ Chat-App landing page
 <h2>Framework</h2>
 <li><label for="title">DJANGO</label></li><br>
 <h2>Prerequisites</h2>
-<ul>
+
 <li> A web Browser (like Google Chrome...)</li>
 <li> A code editor (like VScode...)</li>
-</ul>
+
 <h2>Creator</h2>
 <li></i>Dikachi-official</li>
   <h2>Contributing</h2>
