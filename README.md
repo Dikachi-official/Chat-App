@@ -2,7 +2,7 @@
 Chat-App landing page
 
 <h1>Chat App using Django</h1>
-<p> A simple Chat App built on Django Framework, Where users can interact in different Chat Rooms</p>
+<p> A simple Chat App built on Django Framework, Where users can interact in different Chat rooms</p>
 <h2>Built With</h2>
 <strong><i><p>Major Languages</p><i></strong>
 <hr>
